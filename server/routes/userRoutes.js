@@ -1,4 +1,5 @@
 const express = require('express');
+const { loginController, registerController } = require('../controllers/UserCtrl');
 
 //router onject
 const router = express.Router()
