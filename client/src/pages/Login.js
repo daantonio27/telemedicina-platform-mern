@@ -36,19 +36,19 @@ const Login = () => {
         onFinish={onfinishHandler}
         className="register-form"
       >
-        <h3 className="text-center">Login From</h3>
+        <h3 className="text-center">Login Form</h3>
 
-        <Form.Item label="Email" name="email">
+        <Form.Item label="E-mail" name="email">
           <Input type="email" required />
         </Form.Item>
-        <Form.Item label="Password" name="password">
+        <Form.Item label="Palavra-passe" name="password">
           <Input type="password" required />
         </Form.Item>
         <Link to="/register" className="m-2">
-          Not a user Register here
+          Não é um utilizador Registe-se aqui
         </Link>
         <button className="btn btn-primary" type="submit">
-          Login
+          Iniciar sessão
         </button>
       </Form>
     </div>

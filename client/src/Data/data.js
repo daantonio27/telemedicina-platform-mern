@@ -1,21 +1,21 @@
 export const userMenu = [
   {
-    name: "Home",
+    name: "Início",
     path: "/",
     icon: "fa-solid fa-house",
   },
   {
-    name: "Appointments",
+    name: "Agendamentos",
     path: "/appointments",
     icon: "fa-solid fa-list",
   },
   {
-    name: "Apply Doctor",
+    name: "Candidatar médico",
     path: "/apply-doctor",
     icon: "fa-solid fa-user-doctor",
   },
   {
-    name: "Profile",
+    name: "Profil",
     path: "/profile",
     icon: "fa-solid fa-user",
   },
@@ -24,23 +24,23 @@ export const userMenu = [
 // admin menu
 export const adminMenu = [
   {
-    name: "Home",
+    name: "Início",
     path: "/",
     icon: "fa-solid fa-house",
   },
 
   {
-    name: "Doctors",
+    name: "Médicos",
     path: "/admin/doctors",
     icon: "fa-solid fa-user-doctor",
   },
   {
-    name: "Users",
+    name: "Usuários",
     path: "/admin/users",
     icon: "fa-solid fa-user",
   },
   {
-    name: "Profile",
+    name: "Profil",
     path: "/profile",
     icon: "fa-solid fa-user",
   },

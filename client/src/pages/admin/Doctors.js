@@ -48,7 +48,7 @@ const Doctors = () => {
 
   const columns = [
     {
-      title: "Name",
+      title: "Nome",
       dataIndex: "name",
       render: (text, record) => (
         <span>
@@ -61,11 +61,11 @@ const Doctors = () => {
       dataIndex: "status",
     },
     {
-      title: "phone",
+      title: "Téléfone",
       dataIndex: "phone",
     },
     {
-      title: "Actions",
+      title: "Ações",
       dataIndex: "actions",
       render: (text, record) => (
         <div className="d-flex">
@@ -74,10 +74,10 @@ const Doctors = () => {
               className="btn btn-success"
               onClick={() => handleAccountStatus(record, "approved")}
             >
-              Approve
+              Aprovar
             </button>
           ) : (
-            <button className="btn btn-danger">Reject</button>
+            <button className="btn btn-danger">Rejeitar</button>
           )}
         </div>
       ),
@@ -86,7 +86,7 @@ const Doctors = () => {
 
   return (
     <Layout>
-      <h1 className="text-center m-3">All Doctors</h1>
+      <h1 className="text-center m-3">Todos os médicos</h1>
       <Table columns={columns} dataSource={doctors} />
     </Layout>
   );

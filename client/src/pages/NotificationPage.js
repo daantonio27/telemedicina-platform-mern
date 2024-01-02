@@ -65,12 +65,12 @@ const NotificationPage = () => {
   };
   return (
     <Layout>
-      <h4 className="p-3 text-center">Notification Page</h4>
+      <h4 className="p-3 text-center">Página de notificações</h4>
       <Tabs>
         <Tabs.TabPane tab="unRead" key={0}>
           <div className="d-flex justify-content-end">
             <h4 className="p-2" onClick={handleMarkAllRead}>
-              Mark All Read
+              Marcar todos como lidos
             </h4>
           </div>
           {user?.notifcation.map((notificationMgs) => (

@@ -41,11 +41,11 @@ const Register = () => {
             <Form.Item label="E-mail" name="email">
                 <Input type="email" required />
             </Form.Item>
-            <Form.Item label="Senha" name="password">
+            <Form.Item label="Palavra-passe" name="password">
                 <Input type="password" required />
             </Form.Item>
-            <h6 className='m-2'>Already user <Link to='/login'>login</Link></h6>
-            <Button type="primary" htmlType="submit">Register</Button>
+            <h6 className='m-2'>Já é utilizador <Link to='/login'>login</Link> de usuário</h6>
+            <Button type="primary" htmlType="submit">Registe-se</Button>
         </Form>
       </div>
     </>

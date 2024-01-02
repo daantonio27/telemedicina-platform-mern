@@ -28,24 +28,24 @@ const Users = () => {
   // antD table col
   const columns = [
     {
-      title: "Name",
+      title: "Nome",
       dataIndex: "name",
     },
     {
-      title: "Email",
+      title: "E-mail",
       dataIndex: "email",
     },
     {
-      title: "Doctor",
+      title: "Médico",
       dataIndex: "isDoctor",
       render: (text, record) => <span>{record.isDoctor ? "Yes" : "No"}</span>,
     },
     {
-      title: "Actions",
+      title: "Ações",
       dataIndex: "actions",
       render: (text, record) => (
         <div className="d-flex">
-          <button className="btn btn-danger">Block</button>
+          <button className="btn btn-danger">Bloquear</button>
         </div>
       ),
     },
@@ -53,7 +53,7 @@ const Users = () => {
 
   return (
     <Layout>
-      <h1 className="text-center m-2">Users List</h1>
+      <h1 className="text-center m-2">Lista de usuários</h1>
       <Table columns={columns} dataSource={users} />
     </Layout>
   );

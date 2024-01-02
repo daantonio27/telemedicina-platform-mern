@@ -15,7 +15,9 @@ router.get("/getAllUsers", authMiddleware, getAllUsersController);
 router.get("/getAllDoctors", authMiddleware, getAllDoctorsController);
 
 //POST ACCOUNT STATUS
-router.post("/changeAccountStatus", authMiddleware,
+router.post(
+  "/changeAccountStatus",
+  authMiddleware,
   changeAccountStatusController
 );
 
