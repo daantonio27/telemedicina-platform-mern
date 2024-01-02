@@ -8,6 +8,19 @@ Desenvolvimento duma plataforma de atendimento online (Telemedicina) com seguint
 4.	Integração de pagamentos online (Mobile money e visa)
 5.	Integração com a plataforma do parceiro brasileiro multinacional em telemedicina HAUSSEY
 
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`PORT`
+
+`MONGODB_URL`
+
+`JWT_SECRET`
+
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
