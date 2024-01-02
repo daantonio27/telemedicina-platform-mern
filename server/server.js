@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(moragan('dev')); //logs requests to the console
 
 // Routes
-app.use("/api/v1/user", require("./routes/userRoutes"))
+app.use("/api/v1/user", require("./routes/userRoutes"));
 
 // Iniciar o servidor
 const port = process.env.PORT || 8080;
