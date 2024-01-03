@@ -67,7 +67,7 @@ const DoctorAppointments = () => {
       dataIndex: "status",
     },
     {
-      title: "Actions",
+      title: "Ações",
       dataIndex: "actions",
       render: (text, record) => (
         <div className="d-flex">

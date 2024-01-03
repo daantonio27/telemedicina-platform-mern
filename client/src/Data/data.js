@@ -5,6 +5,11 @@ export const userMenu = [
     icon: "fa-solid fa-house",
   },
   {
+    name: "A clínica",
+    path: "/about",
+    icon: "fa-solid fa-heartbeat",
+  },
+  {
     name: "Agendamentos",
     path: "/appointments",
     icon: "fa-solid fa-list",
@@ -28,7 +33,11 @@ export const adminMenu = [
     path: "/",
     icon: "fa-solid fa-house",
   },
-
+  {
+    name: "A clínica",
+    path: "/about",
+    icon: "fa-solid fa-heartbeat",
+  },
   {
     name: "Médicos",
     path: "/admin/doctors",

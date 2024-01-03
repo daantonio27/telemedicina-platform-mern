@@ -11,7 +11,7 @@ const registerController = async (req, res) => {
     if (exisitingUser) {
       return res
         .status(200)
-        .send({ message: "User Already Exist", success: false });
+        .send({ message: "O usuário já existe", success: false });
     }
     const password = req.body.password;
     const salt = await bcrypt.genSalt(10);
@@ -19,7 +19,7 @@ const registerController = async (req, res) => {
     req.body.password = hashedPassword;
     const newUser = new userModel(req.body);
     await newUser.save();
-    res.status(201).send({ message: "Register Sucessfully", success: true });
+    res.status(201).send({ message: "Register bem-sucedido", success: true });
   } catch (error) {
     console.log(error);
     res.status(500).send({
@@ -36,18 +36,18 @@ const loginController = async (req, res) => {
     if (!user) {
       return res
         .status(200)
-        .send({ message: "user not found", success: false });
+        .send({ message: "usuário não encontrado", success: false });
     }
     const isMatch = await bcrypt.compare(req.body.password, user.password);
     if (!isMatch) {
       return res
         .status(200)
-        .send({ message: "Invlid EMail or Password", success: false });
+        .send({ message: "E-mail ou senha inválidos", success: false });
     }
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
       expiresIn: "1d",
     });
-    res.status(200).send({ message: "Login Success", success: true, token });
+    res.status(200).send({ message: "Login bem-sucedido", success: true, token });
   } catch (error) {
     console.log(error);
     res.status(500).send({ message: `Error in Login CTRL ${error.message}` });
@@ -60,7 +60,7 @@ const authController = async (req, res) => {
     user.password = undefined;
     if (!user) {
       return res.status(200).send({
-        message: "user not found",
+        message: "usuário não encontrado",
         success: false,
       });
     } else {
@@ -98,14 +98,14 @@ const applyDoctorController = async (req, res) => {
     await userModel.findByIdAndUpdate(adminUser._id, { notifcation });
     res.status(201).send({
       success: true,
-      message: "Doctor Account Applied SUccessfully",
+      message: "Conta de médico aplicada com sucesso",
     });
   } catch (error) {
     console.log(error);
     res.status(500).send({
       success: false,
       error,
-      message: "Error WHile Applying For Doctotr",
+      message: "Erro ao se candidatar a médico",
     });
   }
 };
@@ -122,7 +122,7 @@ const getAllNotificationController = async (req, res) => {
     const updatedUser = await user.save();
     res.status(200).send({
       success: true,
-      message: "all notification marked as read",
+      message: "todas as notificações marcadas como lidas",
       data: updatedUser,
     });
   } catch (error) {
@@ -145,14 +145,14 @@ const deleteAllNotificationController = async (req, res) => {
     updatedUser.password = undefined;
     res.status(200).send({
       success: true,
-      message: "Notifications Deleted successfully",
+      message: "Notificações excluídas com sucesso",
       data: updatedUser,
     });
   } catch (error) {
     console.log(error);
     res.status(500).send({
       success: false,
-      message: "unable to delete all notifications",
+      message: "Não é possível excluir todas as notificações",
       error,
     });
   }
@@ -188,7 +188,7 @@ const bookeAppointmnetController = async (req, res) => {
     const user = await userModel.findOne({ _id: req.body.doctorInfo.userId });
     user.notifcation.push({
       type: "New-appointment-request",
-      message: `A nEw Appointment Request from ${req.body.userInfo.name}`,
+      message: `Uma nova solicitação de agendamento de ${req.body.userInfo.name}`,
       onCLickPath: "/user/appointments",
     });
     await user.save();
@@ -225,13 +225,13 @@ const bookingAvailabilityController = async (req, res) => {
     });
     if (appointments.length > 0) {
       return res.status(200).send({
-        message: "Appointments not Availibale at this time",
+        message: "Agendamentos não disponíveis no momento",
         success: true,
       });
     } else {
       return res.status(200).send({
         success: true,
-        message: "Appointments available",
+        message: "Agendamentos disponíveis",
       });
     }
   } catch (error) {

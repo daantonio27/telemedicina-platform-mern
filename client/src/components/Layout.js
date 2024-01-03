@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
   // logout funtion
   const handleLogout = () => {
     localStorage.clear();
-    message.success("Logout Successfully");
+    message.success("Encerrar sessão bem-sucedido");
     navigate("/login");
   };
 

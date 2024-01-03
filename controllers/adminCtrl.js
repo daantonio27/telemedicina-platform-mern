@@ -6,7 +6,7 @@ const getAllUsersController = async (req, res) => {
     const users = await userModel.find({});
     res.status(200).send({
       success: true,
-      message: "users data list",
+      message: "lista de dados de usuários",
       data: users,
     });
   } catch (error) {
@@ -24,7 +24,7 @@ const getAllDoctorsController = async (req, res) => {
     const doctors = await doctorModel.find({});
     res.status(200).send({
       success: true,
-      message: "Doctors Data list",
+      message: "Lista de dados dos médicos",
       data: doctors,
     });
   } catch (error) {
@@ -46,7 +46,7 @@ const changeAccountStatusController = async (req, res) => {
     const notifcation = user.notifcation;
     notifcation.push({
       type: "doctor-account-request-updated",
-      message: `Your Doctor Account Request Has ${status} `,
+      message: `Sua solicitação de conta de médico foi ${status} `,
       onClickPath: "/notification",
     });
     user.isDoctor = status === "approved" ? true : false;
