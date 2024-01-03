@@ -107,7 +107,7 @@ const BookingPage = () => {
             <h4>
               Dr.{doctors.firstName} {doctors.lastName}
             </h4>
-            <h4>Taxas : {doctors.feesPerCunsaltation}</h4>
+            <h4>No. : {doctors.feesPerCunsaltation}</h4>
             <h4>
               Horários : {doctors.timings && doctors.timings[0]} -{" "}
               {doctors.timings && doctors.timings[1]}{" "}
