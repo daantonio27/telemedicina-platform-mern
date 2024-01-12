@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/LayoutStyles.css";
 import { adminMenu, userMenu } from "./../Data/data";
-
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Badge, message } from "antd";
@@ -60,7 +59,7 @@ const Layout = ({ children }) => {
                   <>
                     <div className={`menu-item ${isActive && "active"}`}>
                       <i className={menu.icon}></i>
-                      <Link to={menu.path}>{menu.name}</Link>
+                      <Link to={menu.path} smooth={true}>{menu.name}</Link>
                     </div>
                   </>
                 );
@@ -83,7 +82,7 @@ const Layout = ({ children }) => {
                   <i class="fa-solid fa-bell"></i>
                 </Badge>
 
-                <Link to="/profile">{user?.name}</Link>
+                <Link to="/doctor/profile/:id">{user?.name}</Link>
               </div>
             </div>
             <div className="body">{children}</div>

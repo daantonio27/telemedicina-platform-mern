@@ -1,6 +1,15 @@
+:root {
+  --primary: #00796B;
+  --text: #fff;
+
+  --sidbar-width: 300px;
+}
 .main {
     padding: 10px;
     height: 100vh;
+  }
+  html {
+    scroll-behavior: smooth; 
   }
   .layout {
     display: flex;
@@ -14,6 +23,14 @@
     box-shadow: 0 0 2px gray;
     margin-right: 20px;
     color: white;
+    transition: width 0.3s;
+  }
+  .sidebar.open {
+    width: 240px;
+  }
+  
+  .sidebar.closed {
+    width: 80px;  
   }
   
   .content {
@@ -32,6 +49,7 @@
     margin-bottom: 20px;
     box-shadow: 0 0 2px gray;
     background-color: white;
+    font-family: 'Poppins', sans-serif;
   }
   .logo h6 {
     font-size: 1.5rem;

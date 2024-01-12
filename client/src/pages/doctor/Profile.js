@@ -75,7 +75,7 @@ const Profile = () => {
   }, []);
   return (
     <Layout>
-      <h1>Gerenciar perfil</h1>
+      <h1 style={{textAlign: 'center'}}>Gerenciar perfil</h1>
       {doctor && (
         <Form
           layout="vertical"

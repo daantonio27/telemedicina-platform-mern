@@ -63,7 +63,7 @@ const Appointments = () => {
 
   return (
     <Layout>
-      <h1>Listas de compromissos</h1>
+      <h1 style={{textAlign: 'center'}}>Listas de compromissos</h1>
       <Table columns={columns} dataSource={appointments} />
     </Layout>
   );
